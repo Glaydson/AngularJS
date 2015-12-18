@@ -1,0 +1,6 @@
+{
+  "directory": "bower_components",
+  "registry": "http://bower.herokuapp.com",
+  "proxy":"http://adfor.glaydson:melisa04@cachece:8080/",
+  "https-proxy":"http://adfor.glaydson:melisa04@cachece:8080/"
+}
