@@ -1,0 +1,7 @@
+node_modules
+dist
+.tmp
+.DS_Store
+/confusion/app/fonts/.DS_Store
+/confusion/app/styles/.DS_Store
+/confusion/bower_components/.DS_Store
