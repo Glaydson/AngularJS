@@ -6,7 +6,7 @@
       "image": "images/uthapizza.png",
       "category": "mains",
       "label": "Hot",
-      "price": "4.99",
+      "price": 4.99,
       "description": "A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.",
       "comments": [
         {
@@ -38,6 +38,24 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2015-12-23T20:22:47.633Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2015-12-23T20:23:34.908Z"
+        },
+        {
+          "rating": "1",
+          "comment": "Fraco",
+          "author": "joseph",
+          "date": "2015-12-23T20:30:20.376Z"
         }
       ]
     },
@@ -47,7 +65,7 @@
       "image": "images/zucchipakoda.png",
       "category": "appetizer",
       "label": "",
-      "price": "1.99",
+      "price": 1.99,
       "description": "Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce",
       "comments": [
         {
@@ -79,6 +97,30 @@
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
           "date": "2011-12-02T17:57:28.556094Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2015-12-23T20:12:05.667Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2015-12-23T20:13:09.148Z"
+        },
+        {
+          "rating": 5,
+          "comment": "",
+          "author": "",
+          "date": "2015-12-23T20:13:10.852Z"
+        },
+        {
+          "rating": 5,
+          "comment": "Excellent",
+          "author": "Glaydson",
+          "date": "2015-12-23T20:30:01.958Z"
         }
       ]
     },
