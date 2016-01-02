@@ -18,17 +18,6 @@ angular.module('confusionApp')
                     $scope.message = "Error: " + response.status + " " + response.statusText;
                 }
             );
-
-            /*menuFactory.getDishes().then(
-                function(response) {
-                    $scope.dishes = response.data;
-                    $scope.showMenu = true;
-                },
-                function(response) {
-                    $scope.message = "Error: " + response.status + " " + response.statusText;
-                }
-            );
-            */
                         
             $scope.select = function(setTab) {
                 $scope.tab = setTab;
@@ -69,13 +58,11 @@ angular.module('confusionApp')
 
         .controller('FeedbackController', ['$scope', 'feedbackFactory', function($scope, feedbackFactory) {
 
-
-            
             $scope.sendFeedback = function() {
                 
                 console.log($scope.feedback);
+                var lastFeed = $scope.feedback;
 
-                
                 if ($scope.feedback.agree && ($scope.feedback.mychannel === "")) {
                     $scope.invalidChannelSelection = true;
                     console.log('incorrect');
@@ -83,13 +70,13 @@ angular.module('confusionApp')
                 else {
                     $scope.invalidChannelSelection = false;
                     var feed = feedbackFactory.getFeedbacks().get();
-                    feed.mychannel = $scope.feedback.mychannel;
-                    feed.firstName = $scope.feedback.firstName;
-                    feed.lastName = $scope.feedback.lastName;
-                    feed.agree = $scope.feedback.agree;
-                    feed.email = $scope.feedback.email;
-                    feed.comments = $scope.feedback.comments;
-                    feed.tel = $scope.feedback.tel;
+                    feed.mychannel = lastFeed.mychannel;
+                    feed.firstName = lastFeed.firstName;
+                    feed.lastName = lastFeed.lastName;
+                    feed.agree = lastFeed.agree;
+                    feed.email = lastFeed.email;
+                    feed.comments = lastFeed.comments;
+                    feed.tel = lastFeed.tel;
                     feed.$save();
                     $scope.feedback.firstName = "";
                     $scope.feedback.lastName = "";
@@ -97,9 +84,7 @@ angular.module('confusionApp')
                     $scope.feedback.tel = "";
                     $scope.feedback.mychannel = "";
                     $scope.feedback.comments="";
-                    // Reset the form
                     $scope.feedbackForm.$setPristine();
-                    // remove all the properties from the object
                     $scope.feedback = {};
                 }
             };
@@ -120,15 +105,6 @@ angular.module('confusionApp')
                 }
             );
 
-            /*menuFactory.getDish(parseInt($stateParams.id,10)).then(
-                function(response) {
-                    $scope.dish = response.data;
-                    $scope.showDish = true;
-                },
-                function(response) {
-                    $scope.message = "Error: " + response.status + " " + response.statusText;
-                }
-            );*/
         }])
 
         .controller('DishCommentController', ['$scope', 'menuFactory', function($scope,menuFactory) {
@@ -163,17 +139,6 @@ angular.module('confusionApp')
                     $scope.message = "Error: "+response.status + " " + response.statusText;
                 }
             );
-        /*
-            menuFactory.getDish(0).then(
-                function(response) {
-                    $scope.featuredDish = response.data;
-                    $scope.showDish = true;
-                },
-                function(response) {
-                    $scope.message = "Error: " + response.status + " " + response.statusText;
-                }
-            );
-            */
 
             $scope.showPromotion = false;
             $scope.message = "Loading ...";
@@ -213,6 +178,4 @@ angular.module('confusionApp')
                 }
             );
         }])
-
-
 ;
